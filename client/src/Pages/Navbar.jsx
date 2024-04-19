@@ -88,11 +88,11 @@ const Navbar = () => {
               <button className='logoutbtn' onClick={logout}>logout</button>
             </div>
           )}
-          <div className="MenuItems none">
+{/*           <div className="MenuItems none">
             <HashLink to="/#contact-us" onClick={closeMobileMenu}>
               Contact
             </HashLink>
-          </div>
+          </div> */}
           <div className="MenuItems bgMenu" id="Appointment_menu">
             <HashLink to="/your-dentist/appointments" onClick={closeMobileMenu}>
               BookAppointment 
