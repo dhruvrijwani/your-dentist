@@ -69,7 +69,7 @@ const Home = () => {
             <h2>Flexible Schedule</h2>
               <p>
                 We work on holidays, besides working late on regular days. In
-                case of emergencies we accept bookings.
+                case of emergencies we accept appointments.
               </p>
               <HashLink style={{ textDecoration: "none", color: "#fff" }}>
                 <div className="transperent_btn chat-btn"> Chat with Doctor</div>
