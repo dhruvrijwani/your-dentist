@@ -30,7 +30,7 @@ const AppointmentTable = () => {
   
     const fetchAppointments = async () => {
         try {
-          const response = await fetch("http://localhost:5000/dental-clinic/appointments");
+          const response = await fetch("https://yd-backend.onrender.com/dental-clinic/appointments");
           const data = await response.json();
       
           // Reverse the order of appointments to display them in descending order
@@ -100,7 +100,7 @@ const AppointmentTable = () => {
   
     const updateAppointmentStatus = async (appointmentId, status) => {
       try {
-        const response = await fetch(`http://localhost:5000/dental-clinic/appointments/${appointmentId}`, {
+        const response = await fetch(`https://yd-backend.onrender.com/dental-clinic/appointments/${appointmentId}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
