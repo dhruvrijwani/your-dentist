@@ -202,7 +202,7 @@ const BookingHours = () => {
             type="date"
             placeholder="Select Date"
             name="date"
-            className="input"
+            className="input date"
             style={{ color: "black" }}
             value={activeUser.date}
             onChange={(event) => {
