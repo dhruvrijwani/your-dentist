@@ -5,7 +5,7 @@ function UserProfile() {
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:5000/dental-clinic/appointments";
+    const url = "https://yd-backend.onrender.com/dental-clinic/appointments";
     const getDatas = async () => {
       try {
         const response = await fetch(url, {
