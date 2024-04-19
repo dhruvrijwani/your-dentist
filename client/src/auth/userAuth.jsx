@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useNavigate } from "react";
 
 const UserContext = createContext()
 
@@ -18,6 +18,10 @@ const UserProvider=({children})=>{
         localStorage.removeItem('user')
         setToken(null)
         setUser(null)
+
+        const navigate = useNavigate();
+        navigate('/login');
+
 
     }
     if (loading) {
