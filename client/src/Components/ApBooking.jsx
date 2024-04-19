@@ -4,7 +4,7 @@ const apBooking = () => {
   return (
     <>
       <HashLink
-        to="/dental-clinic/slot"
+        to="/your-dentist/appointments"
         className="sticky_container"
         style={{
           display: "flex",
