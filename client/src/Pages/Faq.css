@@ -1,0 +1,31 @@
+.faq-container {
+    max-width: 80vw;
+    margin: 20px auto;
+    /* padding: 2rem; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .faq {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .faq-item.open {
+    background-color: #f5f5f5;
+  }
+  
+  .faq-ques {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .faq-ans {
+    padding: 1rem;
+  }
+  

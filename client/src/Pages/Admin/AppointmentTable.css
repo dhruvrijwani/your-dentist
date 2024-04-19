@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.table-container {
+  width: 70%;
+  margin: 100px auto; /* Center the table container */
+  height: 400px; /* Set desired height */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds height */
+  border: 1px solid #040b01; /* Add border to the table */
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+
+.appointment-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.table-container h1 {
+  color: black;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  
+}
+
+thead th, tbody td {
+  padding: 12px;
+  /* border: 1px solid #f90909; */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+thead th {
+  background-color: #c4f386;
+}
+
+tbody tr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.636);
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.appointment-details {
+  background-color: #f9f9f9;
+}
+
+.appointment-details p {
+  margin: 5px 0;
+}
+
+.appointment-buttons button {
+  margin-right: 10px;
+}
+
+/* Increase width of columns */
+th, td {
+  width: 33.33%; /* Equal width for all columns */
+}
+
+.accepted {
+  color: green;
+  font-weight: 400;
+}
+
+.rejected {
+  color: red;
+  font-weight: 400;
+}
+
+.expand {
+  background-color: rgb(8, 8, 8);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+}
+
+.action-accept {
+  background-color: rgba(4, 211, 80, 0.753);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  color:white
+}
+.action-reject {
+  background-color: rgba(222, 18, 18, 0.721);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  color:white
+}
+
+
+@media screen and (max-width: 478px) {
+  .table-container {
+    width: 90%;
+  }
+  .expand {
+    font-size: 2vw;
+  }
+  .table-container h1 {
+    font-size: 1.5rem;
+  }
+ }
+
+@media screen and (max-width: 900px) {
+  .table-container {
+    width: 90%;
+  }
+  
+}
