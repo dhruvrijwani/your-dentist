@@ -27,7 +27,7 @@ const ImagesUpload = () => {
 
   const fetchImageTitles = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/images');
+      const response = await fetch('https://yd-backend.onrender.com/api/images');
       if (!response.ok) {
         throw new Error('Failed to fetch image titles');
       }
@@ -54,7 +54,7 @@ const ImagesUpload = () => {
       formData.append('image', image); // Corrected from 'file' to 'image'
       formData.append('title', title);
   
-      const response = await fetch('http://localhost:5000/api/upload', {
+      const response = await fetch('https://yd-backend.onrender.com/api/upload', {
         method: 'POST',
         body: formData
       });
@@ -75,7 +75,7 @@ const ImagesUpload = () => {
   };
   const handleDelete = async (title) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/delete/${encodeURIComponent(title)}`, {
+      const response = await fetch(`https://yd-backend.onrender.com/api/delete/${encodeURIComponent(title)}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
