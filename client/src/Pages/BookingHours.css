@@ -63,4 +63,8 @@ button.login-button:hover {
   label {
     font-size: 14px;
   }
+  .date {
+    height: 30px;
+    width: 350px;
+  }
 }
