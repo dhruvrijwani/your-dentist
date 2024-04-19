@@ -40,7 +40,7 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/images')
+    fetch('https://yd-backend.onrender.com/api/images')
       .then(response => response.json())
       .then(data => {
         setImages(data.images.reverse());
@@ -58,7 +58,7 @@ const Gallery = () => {
       <div className="box">
         {images.map(image => (
           <div key={image._id} >
-            <img src={`http://localhost:5000/${image.imageURL}`} alt={image.title} />
+            <img src={`https://yd-backend.onrender.com/${image.imageURL}`} alt={image.title} />
             {/* <p>{image.title}</p> */}
           </div>
         ))}
