@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../Components/Spinner";
 
 const BookingHours = () => {
-  const url = "http://localhost:5000/dental-clinic/slot/";
+  const url = "https://yd-backend.onrender.com/dental-clinic/slot/";
   const navigate = useNavigate();
   const [loader, setLoader] = useState("none");
   const [activeUser, setActiveUser] = useState({
