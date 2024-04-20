@@ -48,7 +48,7 @@ const Navbar = () => {
             </HashLink>
           </div>
           <div className="MenuItems">
-            <HashLink to="/#" onClick={closeMobileMenu}>
+            <HashLink to="/#contact-us" onClick={closeMobileMenu}>
               ContactUs
             </HashLink>
           </div>
