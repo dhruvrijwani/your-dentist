@@ -170,7 +170,7 @@ const BookingHours = () => {
            // required
           />
 
-          <label>Your Phone </label>
+          <label>Phone Number </label>
           <input
             type="number"
             placeholder="Phone No"
