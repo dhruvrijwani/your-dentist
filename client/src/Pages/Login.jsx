@@ -17,7 +17,7 @@ const Login = () => {
 
   useEffect(()=>{
     if(token) {
-      navigate('/dashboard')
+      navigate('/appointmenttable')
     }
     
   
@@ -45,31 +45,70 @@ const Login = () => {
 
   }
 
-  const handleSubmit= async (e) => {
-    e.preventDefault()
-    try {
-      const loginuser = await post('/login', value)
-      const response=loginuser.data
-      if (response.success) {
-        toast.success(response.message, toastOptions)
-        navigate('/')
-        localStorage.setItem('token', JSON.stringify(response.data.token))
-        localStorage.setItem('user', JSON.stringify(response.data.user))
-        setToken(response.data.token)
-        setUser(response.data.user)
+  // const handleSubmit= async (e) => {
+  //   e.preventDefault()
+  //   try {
+  //     const loginuser = await post('/login', value)
+  //     const response=loginuser.data
+  //     if (response.success) {
+  //       toast.success(response.message, toastOptions)
+  //       navigate('/')
+  //       localStorage.setItem('token', JSON.stringify(response.data.token))
+  //       localStorage.setItem('user', JSON.stringify(response.data.user))
+  //       setToken(response.data.token)
+  //       setUser(response.data.user)
         
+  //     }
+  //   } catch (error) {
+      
+  //   }
+
+  // }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (!value.email.trim()) {
+      toast.error("Username cannot be empty", toastOptions);
+      return;
+    }
+  
+    if (!value.password.trim()) {
+      toast.error("Password cannot be empty", toastOptions);
+      return;
+    }
+  
+    try {
+      const loginuser = await post('/login', value);
+      const response = loginuser.data;
+    
+      if (response.success) {
+        console.log("Login successful!");
+        toast.success("Login successful!", toastOptions);
+        navigate('/');
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+        setToken(response.data.token);
+        setUser(response.data.user);
+        window.location.reload();
+
+      } else {
+        // Check for specific error messages for incorrect username or password
+        if (response.message === "Incorrect username") {
+          toast.error("Incorrect username. Please try again.", toastOptions);
+        } else if (response.message === "Incorrect password") {
+          toast.error("Incorrect password. Please try again.", toastOptions);
+        } else {
+          // Handle other types of errors
+          toast.error(response.message, toastOptions);
+        }
       }
     } catch (error) {
-      
+      toast.error("An error occurred. Please try again later.", toastOptions);
+      console.error("Error:", error); 
     }
+};
 
-  }
-
-
-
-
-
-  
 
   return (
     <>
