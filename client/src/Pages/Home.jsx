@@ -95,7 +95,7 @@ const Home = () => {
               </p>
 
               <HashLink
-                to={"/dental-clinic/slot"}
+                to={"/your-dentist/appointments"}
                 style={{ textDecoration: "none", color: "#fff" }}
               >
                 <div className="transperent_btn" id="tr_btn_01">
