@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../Components/Spinner";
 
 const BookingHours = () => {
-  const url = "https://yd-backend.onrender.com/dental-clinic/slot/";
+  const url = "http://localhost:5000/dental-clinic/slot/";
   const navigate = useNavigate();
   const [loader, setLoader] = useState("none");
   const [activeUser, setActiveUser] = useState({
@@ -50,13 +50,24 @@ const BookingHours = () => {
   }
 
   const handleValidation = () => {
-    const { name, phone, clinic, date, gender, treatment, message } =
-      activeUser;
-    if (name === "") {
+    const { name, phone, clinic, date, gender, treatment, message } = activeUser;
+    
+    if (
+      name === "" &&
+      phone === "" &&
+      clinic === "" &&
+      date === "" &&
+      gender === "" &&
+      treatment === "" &&
+      message === ""
+    ) {
+      toast.error("Please Enter Your All Details", toastOptions);
+      return false;
+    } else if (name === "") {
       toast.error("Enter your name", toastOptions);
       return false;
     } else if (phone === "") {
-      toast.error("Enter Your Currect Phone No", toastOptions);
+      toast.error("Enter Your Whatsapp Phone No.", toastOptions);
       return false;
     } else if (clinic === "") {
       toast.error("Select Clinic", toastOptions);
@@ -73,20 +84,11 @@ const BookingHours = () => {
     } else if (message === "") {
       toast.error("Enter the message", toastOptions);
       return false;
-    } else if (
-      name === "" ||
-      phone === "" ||
-      clinic === "" ||
-      date === "" ||
-      gender === "" ||
-      treatment === "" ||
-      message === ""
-    ) {
-      toast.error("Please Enter Your All Details", toastOptions);
-      return false;
     }
+    
     return true;
   };
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -165,7 +167,7 @@ const BookingHours = () => {
             min="3"
             value={activeUser.name}
             onChange={handleInputs}
-            required
+           // required
           />
 
           <label>Your Phone </label>
@@ -181,7 +183,7 @@ const BookingHours = () => {
                 event.preventDefault();
               }
             }}
-            required
+            // required
           />
 
           <label>Clinic</label>
@@ -190,7 +192,7 @@ const BookingHours = () => {
             className="input"
             value={activeUser.clinic}
             onChange={handleInputs}
-            required
+            // required
           >
             <option value="">Select Clinic</option>
             <option value="sama">Sama</option>
@@ -212,7 +214,7 @@ const BookingHours = () => {
                 handleInputs(event);
               }
             }}
-            required
+            // required
           />
 
           <label>Select Gender</label>
@@ -221,7 +223,7 @@ const BookingHours = () => {
             className="input"
             value={activeUser.gender}
             onChange={handleInputs}
-            required
+            // required
           >
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
@@ -234,7 +236,7 @@ const BookingHours = () => {
             className="input"
             value={activeUser.treatment}
             onChange={handleInputs}
-            required
+            // required
           >
             <option value="">Select Treatment</option>
             <option value="Dental Fillings">Dental Fillings</option>
@@ -257,7 +259,7 @@ const BookingHours = () => {
             min="3"
             value={activeUser.message}
             onChange={handleInputs}
-            required
+            // required
           />
 
           <button className="login-button" id="bcb" type="submit">
