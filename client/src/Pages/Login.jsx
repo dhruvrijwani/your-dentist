@@ -138,7 +138,7 @@ const Login = () => {
                 />
                 <input className="login-button" type="submit" value="Sign In" />
               </form>
-              <span class="agreement"><Link to="/register">Dont Have An Account ? Sign Up</Link></span>
+{/*               <span class="agreement"><Link to="/register">Dont Have An Account ? Sign Up</Link></span> */}
             </div>
             <ToastContainer />
           </div>
