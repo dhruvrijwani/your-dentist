@@ -103,11 +103,13 @@ const Navbar = () => {
               Contact
             </HashLink>
           </div> */}
-          <div className="MenuItems bgMenu" id="Appointment_menu">
-            <HashLink to="/your-dentist/appointments" onClick={closeMobileMenu}>
-              BookAppointment
-            </HashLink>
-          </div>
+          {isLoggedIn && (
+            <div className="MenuItems bgMenu" id="Appointment_menu">
+              <HashLink to="/your-dentist/appointments" onClick={closeMobileMenu}>
+                BookAppointment
+              </HashLink>
+            </div>
+          )}
         </div>
         <div className="toggle_menu_icons" onClick={handleClick}>
           <i className={isActive ? 'fas fa-times' : 'fas fa-bars'}></i>
