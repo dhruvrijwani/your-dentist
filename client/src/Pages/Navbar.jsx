@@ -103,7 +103,7 @@ const Navbar = () => {
               Contact
             </HashLink>
           </div> */}
-          {isLoggedIn && (
+          {!isLoggedIn && (
             <div className="MenuItems bgMenu" id="Appointment_menu">
               <HashLink to="/your-dentist/appointments" onClick={closeMobileMenu}>
                 BookAppointment
