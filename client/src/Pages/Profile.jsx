@@ -10,7 +10,7 @@ const Profile = () => {
       name: "Dr. Manal Badlani",
       occupation: "Dental Surgeon MDS",
       description:
-        "Our clinic's Chief Medical Officer, Dr. Mark Hoffman has been working in this field of medical specialization since 2002. AColumbia medical school graduate, this",
+        "Dr. Manal Badlani is a seasoned dentist with over 10 years of experience, specializing in root canal treatments and dental surgeries. She completed her BDS in Belgavi, Karnataka, and her MDS in Vadodara, Gujarat. Known for her expert care and patient-centric approach, Dr. Badlani offers top-quality dental services in Vadodara.",
     },
     {
       id: 2,
