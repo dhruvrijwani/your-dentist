@@ -18,7 +18,7 @@ const Profile = () => {
       name: "Dr.Shreya Shrivastav",
       occupation: "Dental Surgeon MDS",
       description:
-        "Our clinic's Chief Medical Officer, Dr. Mark Hoffman has been working in this field of medical specialization since 2002. AColumbia medical school graduate, this",
+        "Dr. Shreya Shrivastava is an accomplished dentist with over 11 years of experience, specializing in root canal surgeries and cosmetic dentistry. She completed her BDS in Mumbai and her MDS in Vadodara, where she was a gold medalist. Known for her exceptional skills and patient-centric approach, Dr. Shrivastava offers top-quality dental services in Vadodara.",
     },
   ];
   return (
