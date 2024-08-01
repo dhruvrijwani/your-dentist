@@ -21,7 +21,7 @@
   backdrop-filter: blur(6px);
   /* background-color: #14647d74; */
   border-radius: 6px;
-  border: 1px dashed #14647d;
+/*   border: 1px dashed #14647d; */
   box-shadow: rgba(50, 93, 84, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .profile_details img {
