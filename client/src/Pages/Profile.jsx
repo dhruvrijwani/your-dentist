@@ -6,7 +6,7 @@ const Profile = () => {
   const your_profile_details = [
     {
       id: 1,
-      photo: profile_one_img,
+      photo: profile_two_img,
       name: "Dr. Manal Badlani",
       occupation: "Dental Surgeon MDS",
       description:
@@ -14,7 +14,7 @@ const Profile = () => {
     },
     {
       id: 2,
-      photo: profile_two_img,
+      photo: profile_one_img,
       name: "Dr.Shreya Shrivastav",
       occupation: "Dental Surgeon MDS",
       description:
